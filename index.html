@@ -252,6 +252,13 @@ details .wf-lines{padding:0 0 24px;max-width:60ch}
 .hero .hero-cta{justify-content:center;width:100%}
 .hero .hero-cta .btn{min-width:min(440px,100%);padding:20px 64px}
 @media (max-width:900px){.hero h1{white-space:normal;font-size:clamp(30px,8vw,44px)}.hero p{white-space:normal}}
+
+.social{position:fixed;top:50%;inset-inline-end:18px;transform:translateY(-50%);z-index:55;display:flex;flex-direction:column;gap:10px;padding:10px;background:rgba(9,9,10,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line2);border-radius:14px}
+.social button{width:44px;height:44px;border-radius:10px;display:grid;place-items:center;color:var(--text);transition:.3s}
+.social button:disabled{color:var(--text)}
+.social button:hover{background:rgba(255,255,255,.08)}
+.social svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+@media (max-width:620px){.social{inset-inline-end:8px;padding:6px;gap:6px}.social button{width:38px;height:38px}.social svg{width:20px;height:20px}}
 </style>
 </head>
 <body>
@@ -480,6 +487,11 @@ details .wf-lines{padding:0 0 24px;max-width:60ch}
   </div>
 </footer>
 
+<aside class="social" aria-label="Соцсети и сообщения">
+  <button type="button" disabled aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".8" fill="currentColor" stroke="none"/></svg></button>
+  <button type="button" disabled aria-label="Telegram" title="Telegram"><svg viewBox="0 0 24 24"><path d="M21 4 3 11l6 2.2L11 20l3-4.3 4.6 3.4L21 4Z"/><path d="m9 13.2 7.6-5.6"/></svg></button>
+  <button type="button" disabled aria-label="Сообщения" title="Сообщения"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 0 1-11.7 7.1L4 20l1-4.6A8 8 0 1 1 21 12Z"/></svg></button>
+</aside>
 <script>
 (function(){
   var home=document.getElementById('home'),hd=document.getElementById('header');
